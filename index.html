@@ -10,62 +10,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root, [data-theme="light"] {
-      --color-bg: #f5f5f2;
-      --color-surface: #ffffff;
-      --color-surface-2: #f8f8f6;
-      --color-surface-offset: #ecebe6;
-      --color-border: rgba(15, 23, 42, 0.08);
-      --color-text: #111111;
-      --color-text-muted: #525252;
-      --color-text-faint: #7b7b7b;
-      --color-text-inverse: #f9f9f7;
-      --color-primary: #0f766e;
-      --color-primary-hover: #0b5d5a;
-      --color-primary-soft: rgba(15, 118, 110, 0.10);
-      --color-chip: rgba(15, 118, 110, 0.08);
-      --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
-      --shadow-md: 0 20px 60px rgba(15, 23, 42, 0.08);
+      --color-bg: #f7f6f2;
+      --color-surface: #f9f8f5;
+      --color-surface-2: #fbfbf9;
+      --color-surface-offset: #edeae5;
+      --color-border: rgba(40, 37, 29, 0.12);
+      --color-text: #28251d;
+      --color-text-muted: #66635c;
+      --color-text-faint: #8b877f;
+      --color-text-inverse: #f9f8f4;
+      --color-primary: #0d6b72;
+      --color-primary-hover: #095157;
+      --color-primary-soft: rgba(13, 107, 114, 0.10);
+      --color-chip: rgba(13, 107, 114, 0.12);
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 30px rgba(26, 20, 10, 0.08);
       --radius-sm: 12px;
       --radius-md: 18px;
-      --radius-lg: 32px;
-      --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      --font-display: "SF Pro Display", "Inter", system-ui, sans-serif;
-      --content: 1200px;
+      --radius-lg: 28px;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --content: 1180px;
     }
     [data-theme="dark"] {
-      --color-bg: #0f1110;
-      --color-surface: #161815;
-      --color-surface-2: #1c1f1a;
-      --color-surface-offset: #242721;
+      --color-bg: #121311;
+      --color-surface: #181917;
+      --color-surface-2: #1f201d;
+      --color-surface-offset: #292b27;
       --color-border: rgba(244, 241, 234, 0.10);
-      --color-text: #f2efe8;
-      --color-text-muted: #bdb8ae;
-      --color-text-faint: #8d887d;
+      --color-text: #ece7df;
+      --color-text-muted: #b6b0a5;
+      --color-text-faint: #8a857d;
       --color-text-inverse: #10110f;
-      --color-primary: #6ec6c4;
-      --color-primary-hover: #8fd8d6;
-      --color-primary-soft: rgba(110, 198, 196, 0.16);
-      --color-chip: rgba(110, 198, 196, 0.14);
+      --color-primary: #64a8b1;
+      --color-primary-hover: #80bcc4;
+      --color-primary-soft: rgba(100, 168, 177, 0.14);
+      --color-chip: rgba(100, 168, 177, 0.16);
       --shadow-sm: 0 1px 2px rgba(0,0,0,0.25);
-      --shadow-md: 0 18px 46px rgba(0,0,0,0.26);
+      --shadow-md: 0 12px 40px rgba(0,0,0,0.26);
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: var(--font-body);
-      background: linear-gradient(180deg, #ffffff 0%, var(--color-bg) 100%);
+      background:
+        radial-gradient(circle at top right, var(--color-primary-soft), transparent 25%),
+        var(--color-bg);
       color: var(--color-text);
-      line-height: 1.65;
-      letter-spacing: -0.01em;
+      line-height: 1.6;
     }
     a { color: inherit; text-decoration: none; }
     img, svg { max-width: 100%; display: block; }
-    .container { width: min(var(--content), calc(100% - 36px)); margin: 0 auto; }
+    .container { width: min(var(--content), calc(100% - 32px)); margin: 0 auto; }
     .site-header {
       position: sticky; top: 0; z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(255, 255, 255, 0.72);
+      background: color-mix(in srgb, var(--color-bg) 78%, transparent);
       border-bottom: 1px solid var(--color-border);
     }
     .header-inner {
@@ -87,10 +88,10 @@
       border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);
       width: 44px; height: 44px; border-radius: 14px; cursor: pointer;
     }
-    section { padding: 96px 0; }
-    .hero { padding-top: 72px; }
+    section { padding: 88px 0; }
+    .hero { padding-top: 64px; }
     .hero-grid {
-      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 32px; align-items: stretch;
+      display: grid; grid-template-columns: 1.25fr 0.95fr; gap: 30px; align-items: stretch;
     }
     .hero-copy, .hero-visual, .panel {
       background: color-mix(in srgb, var(--color-surface) 92%, transparent);
@@ -98,7 +99,7 @@
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-md);
     }
-    .hero-copy { padding: 56px; }
+    .hero-copy { padding: 42px; }
     .eyebrow {
       display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px;
       background: var(--color-chip); color: var(--color-primary); font-size: 0.82rem; font-weight: 700;
@@ -111,24 +112,21 @@
     }
     .hero-copy h1 span { color: var(--color-primary); display: block; }
     .lede {
-      margin-top: 22px; font-size: 1.08rem; color: var(--color-text-muted); max-width: 60ch;
-      line-height: 1.8;
+      margin-top: 22px; font-size: 1.08rem; color: var(--color-text-muted); max-width: 58ch;
     }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-      padding: 14px 20px; border-radius: 999px; font-weight: 700; border: 1px solid transparent;
-      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      padding: 14px 20px; border-radius: 16px; font-weight: 700; border: 1px solid transparent;
     }
-    .btn:hover { transform: translateY(-1px); }
-    .btn-primary { background: var(--color-primary); color: var(--color-text-inverse); box-shadow: 0 10px 24px rgba(15, 118, 110, 0.16); }
+    .btn-primary { background: var(--color-primary); color: var(--color-text-inverse); }
     .btn-primary:hover { background: var(--color-primary-hover); }
-    .btn-secondary { border-color: var(--color-border); background: var(--color-surface); }
+    .btn-secondary { border-color: var(--color-border); background: var(--color-surface-2); }
     .hero-meta {
       display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 34px;
     }
     .hero-meta .meta-box {
-      padding: 16px; border-radius: 18px; background: transparent;
+      padding: 16px; border-radius: 18px; background: var(--color-surface-2);
       border: 1px solid var(--color-border);
     }
     .meta-box strong { display: block; font-size: 1rem; }
@@ -179,17 +177,13 @@
       display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px;
     }
     .project-card {
-      background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 28px;
-      overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column;
-      transition: transform 180ms ease, box-shadow 180ms ease;
-    }
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
+      background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 26px;
+      overflow: hidden; box-shadow: var(--shadow-md); display: flex; flex-direction: column;
     }
     .project-visual {
-      padding: 24px; min-height: 240px; background:
-        linear-gradient(135deg, var(--color-primary-soft), transparent 70%),
+      padding: 22px; min-height: 220px; background:
+        radial-gradient(circle at top left, var(--color-primary-soft), transparent 30%),
+        linear-gradient(135deg, var(--color-surface-offset), transparent 60%),
         var(--color-surface-2);
       border-bottom: 1px solid var(--color-border);
     }
