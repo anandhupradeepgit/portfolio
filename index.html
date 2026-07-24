@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>anandhu-pradeep-portfolio</title>
+  <title>Anandhu Pradeep — Embedded Hardware & Intelligent Systems Engineer</title>
+  <meta name="description" content="Public portfolio website for Anandhu Pradeep, embedded hardware engineer focused on electronics, power systems, firmware, validation, IoT, robotics, and industrial product development." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,504 +13,701 @@
       --color-bg: #f7f6f2;
       --color-surface: #f9f8f5;
       --color-surface-2: #fbfbf9;
-      --color-surface-offset: #f3f0ec;
-      --color-surface-offset-2: #edeae5;
-      --color-surface-dynamic: #e6e4df;
-      --color-divider: #dcd9d5;
-      --color-border: #d4d1ca;
+      --color-surface-offset: #edeae5;
+      --color-border: rgba(40, 37, 29, 0.12);
       --color-text: #28251d;
-      --color-text-muted: #6e6c67;
-      --color-text-faint: #9f9b95;
+      --color-text-muted: #66635c;
+      --color-text-faint: #8b877f;
       --color-text-inverse: #f9f8f4;
-      --color-primary: #01696f;
-      --color-primary-hover: #0c4e54;
-      --color-primary-active: #0f3638;
-      --color-primary-highlight: #cedcd8;
-      --radius-sm: 0.375rem;
-      --radius-md: 0.625rem;
-      --radius-lg: 1rem;
-      --radius-xl: 1.5rem;
-      --radius-full: 9999px;
-      --shadow-sm: 0 1px 2px rgba(23,23,23,.05);
-      --shadow-md: 0 12px 30px rgba(23,23,23,.08);
-      --shadow-lg: 0 24px 60px rgba(23,23,23,.12);
-      --text-xs: clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
-      --text-sm: clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
-      --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
-      --text-lg: clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
-      --text-xl: clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
-      --text-2xl: clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
-      --text-3xl: clamp(2.5rem,   1rem    + 4vw,    4.6rem);
-      --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
-      --font-body: 'Inter', sans-serif;
+      --color-primary: #0d6b72;
+      --color-primary-hover: #095157;
+      --color-primary-soft: rgba(13, 107, 114, 0.10);
+      --color-chip: rgba(13, 107, 114, 0.12);
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 30px rgba(26, 20, 10, 0.08);
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --font-body: 'Inter', system-ui, sans-serif;
       --font-display: 'Instrument Serif', Georgia, serif;
-      --content-default: 1120px;
-      --hero-glow: rgba(1, 105, 111, .16);
-      --hero-grid: rgba(1, 105, 111, .12);
+      --content: 1180px;
     }
     [data-theme="dark"] {
-      --color-bg: #171614;
-      --color-surface: #1c1b19;
-      --color-surface-2: #201f1d;
-      --color-surface-offset: #1d1c1a;
-      --color-surface-offset-2: #22211f;
-      --color-surface-dynamic: #2d2c2a;
-      --color-divider: #262523;
-      --color-border: #393836;
-      --color-text: #cdccca;
-      --color-text-muted: #a09e99;
-      --color-text-faint: #777470;
-      --color-text-inverse: #2b2a28;
-      --color-primary: #4f98a3;
-      --color-primary-hover: #227f8b;
-      --color-primary-active: #1a626b;
-      --color-primary-highlight: #313b3b;
-      --shadow-sm: 0 1px 2px rgba(0,0,0,.2);
-      --shadow-md: 0 12px 30px rgba(0,0,0,.28);
-      --shadow-lg: 0 24px 60px rgba(0,0,0,.4);
-      --hero-glow: rgba(79, 152, 163, .18);
-      --hero-grid: rgba(79, 152, 163, .16);
+      --color-bg: #121311;
+      --color-surface: #181917;
+      --color-surface-2: #1f201d;
+      --color-surface-offset: #292b27;
+      --color-border: rgba(244, 241, 234, 0.10);
+      --color-text: #ece7df;
+      --color-text-muted: #b6b0a5;
+      --color-text-faint: #8a857d;
+      --color-text-inverse: #10110f;
+      --color-primary: #64a8b1;
+      --color-primary-hover: #80bcc4;
+      --color-primary-soft: rgba(100, 168, 177, 0.14);
+      --color-chip: rgba(100, 168, 177, 0.16);
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.25);
+      --shadow-md: 0 12px 40px rgba(0,0,0,0.26);
     }
-    *,:before,:after{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;min-height:100vh;font-family:var(--font-body);font-size:var(--text-base);line-height:1.65;background:radial-gradient(circle at top, color-mix(in srgb,var(--hero-glow) 100%, transparent), transparent 32%), var(--color-bg);color:var(--color-text);text-rendering:optimizeLegibility;overflow-x:hidden}
-    a{color:inherit;text-decoration:none}
-    img,svg{display:block;max-width:100%}
-    button{font:inherit;border:0;background:none;cursor:pointer}
-    .container{width:min(calc(100% - 2rem), var(--content-default));margin-inline:auto}
-    .skip-link{position:absolute;left:-999px;top:1rem;background:var(--color-primary);color:var(--color-text-inverse);padding:.75rem 1rem;border-radius:var(--radius-full)}
-    .skip-link:focus{left:1rem;z-index:1000}
-    .site-header{position:sticky;top:0;z-index:20;background:color-mix(in srgb, var(--color-bg) 82%, transparent);backdrop-filter:blur(14px);border-bottom:1px solid color-mix(in srgb,var(--color-text) 10%, transparent)}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);min-height:4.5rem}
-    .brand{display:flex;align-items:center;gap:.85rem;font-weight:700;letter-spacing:.02em}
-    .brand-mark{width:2.2rem;height:2.2rem;padding:.35rem;border-radius:.7rem;background:var(--color-surface);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);box-shadow:var(--shadow-sm)}
-    .brand-mark svg{width:100%;height:100%}
-    .nav-links{display:flex;align-items:center;gap:1rem;color:var(--color-text-muted);font-size:var(--text-sm)}
-    .nav-links a:hover,.nav-links a:focus-visible{color:var(--color-text)}
-    .theme-toggle{display:grid;place-items:center;width:2.75rem;height:2.75rem;border-radius:50%;border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);background:var(--color-surface)}
-    .nav-links a{position:relative;padding:.35rem 0}
-    .nav-links a:after{content:"";position:absolute;left:0;bottom:-.15rem;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .24s ease}
-    .nav-links a:hover:after,.nav-links a:focus-visible:after{transform:scaleX(1)}
-    .theme-toggle:hover{transform:translateY(-1px)}
-    .hero{position:relative;padding:clamp(4rem,8vw,7rem) 0 3rem}
-    .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--hero-grid) 1px, transparent 1px), linear-gradient(90deg, var(--hero-grid) 1px, transparent 1px);background-size:48px 48px;mask-image:linear-gradient(180deg, rgba(0,0,0,.9), transparent 78%);pointer-events:none;opacity:.55}
-    .hero-copy{position:relative;z-index:1}
-    .hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem;margin-top:var(--space-8)}
-    .stat-chip{padding:1rem;border-radius:1rem;background:color-mix(in srgb,var(--color-surface) 90%, transparent);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);backdrop-filter:blur(10px)}
-    .stat-chip strong{display:block;font-size:1.2rem;line-height:1.1;margin-bottom:.2rem}
-    .stat-chip span{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-muted)}
-    .hero-orbit{position:absolute;right:-2rem;top:-1rem;width:220px;height:220px;border-radius:50%;border:1px solid color-mix(in srgb,var(--color-primary) 20%, transparent);opacity:.7;filter:blur(.1px);animation:spin 22s linear infinite}
-    .hero-orbit:before,.hero-orbit:after{content:"";position:absolute;border-radius:50%;background:var(--color-primary)}
-    .hero-orbit:before{width:12px;height:12px;top:18px;left:22px;box-shadow:0 0 0 10px color-mix(in srgb,var(--color-primary) 10%, transparent)}
-    .hero-orbit:after{width:9px;height:9px;right:32px;bottom:26px;background:color-mix(in srgb,var(--color-primary) 60%, white)}
-    .hero-panel{position:relative;overflow:hidden}
-    .hero-panel:after{content:"";position:absolute;inset:auto -10% -20% 42%;height:120px;background:radial-gradient(circle, color-mix(in srgb,var(--color-primary) 24%, transparent), transparent 62%);pointer-events:none}
-    .schematic{transition:transform .45s ease, box-shadow .45s ease}
-    .hero-panel:hover .schematic{transform:scale(1.02) rotate(-1.2deg);box-shadow:var(--shadow-md)}
-    .node{box-shadow:0 0 0 0 color-mix(in srgb,var(--color-primary) 28%, transparent);animation:pulse 2.8s ease-in-out infinite}
-    .node.two{animation-delay:.9s}.node.three{animation-delay:1.4s}
-    .trace{animation:dash 9s linear infinite}
-    .metric{transition:transform .24s ease, border-color .24s ease, background .24s ease}
-    .metric:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--color-primary) 20%, transparent);background:color-mix(in srgb,var(--color-primary) 8%, var(--color-surface-2))}
-    .section-kicker{font-size:var(--text-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--color-primary);font-weight:700;margin-bottom:.75rem}
-    .project{position:relative;transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease}
-    .project:hover{transform:translateY(-6px);box-shadow:var(--shadow-md);border-color:color-mix(in srgb,var(--color-primary) 18%, transparent)}
-    .project-overlay{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:.35rem;border-top:1px solid color-mix(in srgb,var(--color-text) 8%, transparent);font-size:var(--text-sm);color:var(--color-text-muted)}
-    .project-arrow{display:inline-flex;align-items:center;gap:.35rem;color:var(--color-primary);font-weight:600}
-    .project-arrow svg{transition:transform .24s ease}
-    .project:hover .project-arrow svg{transform:translateX(4px)}
-    .project-tabs{display:flex;flex-wrap:wrap;gap:.75rem;margin-bottom:var(--space-8)}
-    .tab-btn{min-height:42px;padding:.7rem 1rem;border-radius:var(--radius-full);background:var(--color-surface);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted)}
-    .tab-btn.is-active{background:var(--color-primary);border-color:var(--color-primary);color:var(--color-text-inverse);box-shadow:var(--shadow-sm)}
-    .skill-group{transition:transform .24s ease,border-color .24s ease}
-    .skill-group:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--color-primary) 16%, transparent)}
-    .timeline-item{position:relative}
-    .timeline-item:before{content:"";position:absolute;left:134px;top:1.3rem;width:10px;height:10px;border-radius:50%;background:var(--color-primary);box-shadow:0 0 0 8px color-mix(in srgb,var(--color-primary) 10%, transparent)}
-    .contact-card{position:relative;overflow:hidden}
-    .contact-card:before{content:"";position:absolute;inset:auto auto -80px -40px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle, color-mix(in srgb,var(--color-primary) 16%, transparent), transparent 65%)}
-    .floating-chip{position:absolute;right:1rem;top:1rem;padding:.55rem .8rem;border-radius:var(--radius-full);background:color-mix(in srgb,var(--color-surface) 82%, transparent);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-muted);backdrop-filter:blur(10px)}
-    .scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--color-primary),color-mix(in srgb,var(--color-primary) 60%, white));z-index:40}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    @keyframes pulse{0%,100%{box-shadow:0 0 0 0 color-mix(in srgb,var(--color-primary) 24%, transparent)}50%{box-shadow:0 0 0 10px color-mix(in srgb,var(--color-primary) 0%, transparent)}}
-    @keyframes dash{0%{opacity:.55}50%{opacity:1}100%{opacity:.55}}
-    .hero{padding:clamp(4rem,8vw,7rem) 0 3rem}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:var(--space-12);align-items:end}
-    .eyebrow{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem .85rem;border-radius:var(--radius-full);background:var(--color-primary-highlight);color:var(--color-primary);font-size:var(--text-sm);font-weight:600;margin-bottom:var(--space-6)}
-    .hero h1{font-family:var(--font-display);font-size:var(--text-3xl);line-height:.95;letter-spacing:-.03em;max-width:11ch;margin:0 0 var(--space-5)}
-    .hero p{max-width:62ch;color:var(--color-text-muted);margin:0 0 var(--space-8)}
-    .cta-row{display:flex;flex-wrap:wrap;gap:.9rem}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:.9rem 1.2rem;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:600;border:1px solid transparent}
-    .btn-primary{background:var(--color-primary);color:var(--color-text-inverse)}
-    .btn-primary:hover{background:var(--color-primary-hover)}
-    .btn-secondary{background:var(--color-surface);border-color:color-mix(in srgb,var(--color-text) 12%, transparent)}
-    .hero-panel{padding:1.4rem;border-radius:var(--radius-xl);background:linear-gradient(180deg,var(--color-surface),var(--color-surface-offset));border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);box-shadow:var(--shadow-md)}
-    .system-card{display:grid;gap:1rem}
-    .system-top{display:flex;justify-content:space-between;align-items:center;color:var(--color-text-muted);font-size:var(--text-sm)}
-    .schematic{aspect-ratio:1/1;border-radius:1.2rem;background:radial-gradient(circle at 25% 20%, color-mix(in srgb,var(--color-primary) 22%, transparent), transparent 28%),linear-gradient(180deg,var(--color-surface-2),var(--color-surface-offset));border:1px solid color-mix(in srgb,var(--color-text) 8%, transparent);padding:1rem;position:relative;overflow:hidden}
-    .schematic:before,.schematic:after{content:"";position:absolute;inset:auto}
-    .schematic-grid{position:absolute;inset:0;background-image:linear-gradient(color-mix(in srgb,var(--color-text) 8%, transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--color-text) 8%, transparent) 1px,transparent 1px);background-size:34px 34px;opacity:.45}
-    .node{position:absolute;border-radius:999px;background:var(--color-primary)}
-    .node.one{width:12px;height:12px;top:24%;left:22%}.node.two{width:16px;height:16px;top:48%;left:62%}.node.three{width:10px;height:10px;top:71%;left:34%}
-    .trace{position:absolute;border-top:1.5px dashed color-mix(in srgb,var(--color-primary) 56%, var(--color-text) 10%)}
-    .trace.a{width:42%;top:28%;left:24%;transform:rotate(12deg)} .trace.b{width:28%;top:58%;left:38%;transform:rotate(-22deg)} .trace.c{width:22%;top:68%;left:30%;transform:rotate(28deg)}
-    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.8rem}
-    .metric{padding:1rem;border-radius:1rem;background:var(--color-surface-2);border:1px solid color-mix(in srgb,var(--color-text) 8%, transparent)}
-    .metric strong{display:block;font-size:1.35rem;margin-bottom:.2rem}
-    .metric span{font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.08em}
-    section{padding:clamp(3rem,6vw,5.5rem) 0}
-    .section-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem;align-items:end;margin-bottom:var(--space-8)}
-    .section-head h2{font-size:var(--text-2xl);line-height:1.05;font-family:var(--font-display);margin:0}
-    .section-head p{max-width:58ch;margin:0;color:var(--color-text-muted)}
-    .projects-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
-    .project{grid-column:span 6;padding:1.35rem;border-radius:1.2rem;background:var(--color-surface);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);box-shadow:var(--shadow-sm);display:grid;gap:1rem;content-visibility:auto}
-    .project.featured{grid-column:span 12;grid-template-columns:1.1fr .9fr;align-items:start}
-    .project-meta{display:flex;flex-wrap:wrap;gap:.55rem;font-size:var(--text-xs);color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.08em}
-    .project h3{margin:0;font-size:clamp(1.25rem,1rem + .7vw,1.8rem);line-height:1.15}
-    .project p{margin:0;color:var(--color-text-muted)}
-    .tags{display:flex;flex-wrap:wrap;gap:.55rem}
-    .tag{padding:.35rem .65rem;border-radius:var(--radius-full);background:var(--color-surface-offset);font-size:var(--text-xs);color:var(--color-text-muted);border:1px solid color-mix(in srgb,var(--color-text) 7%, transparent)}
-    .impact-list{display:grid;gap:.7rem;padding:0;margin:0;list-style:none}
-    .impact-list li{padding-left:1rem;position:relative;color:var(--color-text-muted)}
-    .impact-list li:before{content:"";position:absolute;left:0;top:.68em;width:7px;height:7px;border-radius:50%;background:var(--color-primary)}
-    .project-visual{min-height:100%;border-radius:1rem;background:linear-gradient(180deg,color-mix(in srgb,var(--color-primary) 8%, var(--color-surface)), var(--color-surface-offset));border:1px solid color-mix(in srgb,var(--color-text) 8%, transparent);padding:1rem;display:grid;align-content:space-between;gap:1rem}
-    .mini-chart{display:grid;grid-template-columns:repeat(8,1fr);align-items:end;gap:.35rem;height:170px}
-    .mini-chart span{background:linear-gradient(180deg,color-mix(in srgb,var(--color-primary) 55%, white),var(--color-primary));border-radius:.4rem .4rem 0 0}
-    .stack{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-    .panel{padding:1.35rem;border-radius:1.2rem;background:var(--color-surface);border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);box-shadow:var(--shadow-sm)}
-    .panel h3{margin:0 0 .85rem;font-size:var(--text-lg)}
-    .panel p{margin:0;color:var(--color-text-muted)}
-    .skill-groups{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-    .skill-group{padding:1rem;border-radius:1rem;background:var(--color-surface-2);border:1px solid color-mix(in srgb,var(--color-text) 8%, transparent)}
-    .skill-group h4{margin:0 0 .75rem;font-size:var(--text-sm);letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-muted)}
-    .skill-list{display:flex;flex-wrap:wrap;gap:.5rem}
-    .timeline{display:grid;gap:1rem}
-    .timeline-item{display:grid;grid-template-columns:140px 1fr;gap:1rem;padding-top:1rem;border-top:1px solid var(--color-divider)}
-    .timeline-item:first-child{border-top:0;padding-top:0}
-    .timeline-label{font-size:var(--text-sm);color:var(--color-text-muted);font-weight:600}
-    .contact-card{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem;padding:1.35rem;border-radius:1.4rem;background:linear-gradient(180deg,var(--color-surface),var(--color-surface-offset));border:1px solid color-mix(in srgb,var(--color-text) 10%, transparent);box-shadow:var(--shadow-md)}
-    .contact-actions{display:flex;flex-wrap:wrap;gap:.75rem;align-content:start;justify-content:flex-end}
-    .footer{padding:2rem 0 4rem;color:var(--color-text-muted);font-size:var(--text-sm)}
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
-    .reveal.is-visible{opacity:1;transform:none}
-    @media (max-width: 980px){
-      .hero-grid,.project.featured,.contact-card,.section-head,.timeline-item{grid-template-columns:1fr}
-      .projects-grid,.stack,.skill-groups,.metrics{grid-template-columns:1fr 1fr}
-      .project,.project.featured{grid-column:span 12}
-      .contact-actions{justify-content:flex-start}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background:
+        radial-gradient(circle at top right, var(--color-primary-soft), transparent 25%),
+        var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
     }
-    @media (max-width: 700px){
-      .nav-links{display:none}
-      .projects-grid,.stack,.skill-groups,.metrics{grid-template-columns:1fr}
-      .hero{padding-top:2.8rem}
-      .hero h1{max-width:unset}
+    a { color: inherit; text-decoration: none; }
+    img, svg { max-width: 100%; display: block; }
+    .container { width: min(var(--content), calc(100% - 32px)); margin: 0 auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: color-mix(in srgb, var(--color-bg) 78%, transparent);
+      border-bottom: 1px solid var(--color-border);
     }
-    @media (prefers-reduced-motion: reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; min-height: 72px;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; font-weight: 700; }
+    .brand-mark {
+      width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--color-primary-soft), transparent), var(--color-surface);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .brand-mark svg { width: 24px; height: 24px; color: var(--color-primary); }
+    .nav { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+    .nav a { color: var(--color-text-muted); font-size: 0.95rem; }
+    .nav a:hover { color: var(--color-text); }
+    .theme-toggle {
+      border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);
+      width: 44px; height: 44px; border-radius: 14px; cursor: pointer;
+    }
+    section { padding: 88px 0; }
+    .hero { padding-top: 64px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.25fr 0.95fr; gap: 30px; align-items: stretch;
+    }
+    .hero-copy, .hero-visual, .panel {
+      background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+    .hero-copy { padding: 42px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px;
+      background: var(--color-chip); color: var(--color-primary); font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.06; margin: 0; }
+    h1 {
+      font-family: var(--font-display); font-size: clamp(3rem, 6vw, 6.5rem);
+      font-weight: 400; letter-spacing: -0.04em; margin-top: 22px;
+    }
+    .hero-copy h1 span { color: var(--color-primary); display: block; }
+    .lede {
+      margin-top: 22px; font-size: 1.08rem; color: var(--color-text-muted); max-width: 58ch;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px 20px; border-radius: 16px; font-weight: 700; border: 1px solid transparent;
+    }
+    .btn-primary { background: var(--color-primary); color: var(--color-text-inverse); }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .btn-secondary { border-color: var(--color-border); background: var(--color-surface-2); }
+    .hero-meta {
+      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 34px;
+    }
+    .hero-meta .meta-box {
+      padding: 16px; border-radius: 18px; background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+    }
+    .meta-box strong { display: block; font-size: 1rem; }
+    .meta-box span { color: var(--color-text-muted); font-size: 0.92rem; }
+    .hero-visual { padding: 24px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+    .schematic {
+      min-height: 100%; border-radius: 22px; padding: 26px;
+      background:
+        linear-gradient(180deg, color-mix(in srgb, var(--color-primary-soft) 60%, transparent), transparent 34%),
+        linear-gradient(135deg, var(--color-surface-offset), transparent 55%),
+        var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      display: flex; flex-direction: column; justify-content: space-between; gap: 28px;
+    }
+    .schematic-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px;
+    }
+    .node {
+      border-radius: 18px; border: 1px solid var(--color-border); background: rgba(255,255,255,0.04);
+      padding: 14px; min-height: 92px;
+    }
+    .node small { display: block; color: var(--color-primary); text-transform: uppercase; letter-spacing: .06em; font-weight: 700; }
+    .node strong { display: block; margin-top: 8px; font-size: 1rem; }
+    .node span { color: var(--color-text-muted); font-size: 0.9rem; }
+    .section-head { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 28px; }
+    .section-head p { max-width: 64ch; color: var(--color-text-muted); margin: 10px 0 0; }
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      font-weight: 400; letter-spacing: -0.03em;
+    }
+    .about-grid, .experience-grid, .contact-grid {
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px;
+    }
+    .panel { padding: 28px; }
+    .panel p { color: var(--color-text-muted); }
+    .chip-wrap, .mini-grid, .link-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      padding: 10px 14px; border-radius: 999px; background: var(--color-chip);
+      border: 1px solid var(--color-border); font-size: 0.92rem; color: var(--color-text);
+    }
+    .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 16px; }
+    .stat {
+      padding: 18px; background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: 18px;
+    }
+    .stat strong { display: block; font-size: 1.8rem; font-weight: 800; color: var(--color-primary); }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px;
+    }
+    .project-card {
+      background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 26px;
+      overflow: hidden; box-shadow: var(--shadow-md); display: flex; flex-direction: column;
+    }
+    .project-visual {
+      padding: 22px; min-height: 220px; background:
+        radial-gradient(circle at top left, var(--color-primary-soft), transparent 30%),
+        linear-gradient(135deg, var(--color-surface-offset), transparent 60%),
+        var(--color-surface-2);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .project-body { padding: 22px; }
+    .project-body p { color: var(--color-text-muted); margin: 12px 0 0; }
+    .bullet-list { margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .bullet-list li {
+      display: flex; gap: 10px; color: var(--color-text-muted); font-size: 0.96rem;
+    }
+    .bullet-list li::before {
+      content: ""; width: 8px; height: 8px; margin-top: 9px; border-radius: 999px; flex: 0 0 auto;
+      background: var(--color-primary);
+    }
+    .companies {
+      display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px;
+    }
+    .company-card {
+      position: relative; overflow: hidden; min-height: 220px; padding: 22px;
+      border-radius: 24px; border: 1px solid var(--color-border); box-shadow: var(--shadow-md);
+      background: linear-gradient(160deg, color-mix(in srgb, var(--color-primary-soft) 70%, transparent), transparent 48%), var(--color-surface);
+    }
+    .company-card::after {
+      content: ""; position: absolute; inset: auto -30px -30px auto; width: 120px; height: 120px;
+      border-radius: 30px; background: var(--color-primary-soft); transform: rotate(12deg);
+    }
+    .company-card strong { font-size: 1.15rem; display: block; }
+    .company-card span { display: block; color: var(--color-text-muted); margin-top: 8px; }
+    .company-card p { color: var(--color-text-muted); font-size: 0.95rem; margin-top: 36px; max-width: 22ch; }
+    .skill-columns {
+      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px;
+    }
+    .skill-card {
+      padding: 22px; border-radius: 24px; background: var(--color-surface); border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .skill-card h3 { font-size: 1.08rem; margin-bottom: 14px; }
+    .timeline { display: grid; gap: 18px; }
+    .timeline-item {
+      padding: 20px; border-radius: 22px; background: var(--color-surface-2); border: 1px solid var(--color-border);
+    }
+    .timeline-item strong { display: block; font-size: 1.05rem; }
+    .timeline-item span { color: var(--color-primary); font-size: .92rem; font-weight: 700; }
+    .contact-card {
+      min-height: 100%; display: flex; flex-direction: column; justify-content: space-between;
+      background: linear-gradient(135deg, var(--color-primary-soft), transparent 60%), var(--color-surface);
+      border: 1px solid var(--color-border); border-radius: 28px; padding: 28px; box-shadow: var(--shadow-md);
+    }
+    .contact-list { display: grid; gap: 12px; margin-top: 22px; }
+    .contact-item {
+      display: flex; justify-content: space-between; gap: 14px; align-items: center;
+      padding: 14px 16px; background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: 18px;
+    }
+    .contact-item span { color: var(--color-text-muted); }
+    footer {
+      padding: 24px 0 50px; color: var(--color-text-faint); font-size: 0.92rem;
+    }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; border-top: 1px solid var(--color-border); padding-top: 20px; }
+    @media (max-width: 1024px) {
+      .hero-grid, .about-grid, .experience-grid, .contact-grid, .projects-grid, .skill-columns, .companies {
+        grid-template-columns: 1fr;
+      }
+      .hero-meta { grid-template-columns: 1fr; }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 760px) {
+      .nav { display: none; }
+      .hero-copy, .panel, .hero-visual, .contact-card { padding: 22px; }
+      section { padding: 72px 0; }
+      .hero { padding-top: 28px; }
+      h1 { font-size: clamp(2.6rem, 16vw, 4.4rem); }
+      h2 { font-size: clamp(2rem, 10vw, 3rem); }
+      .companies { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <div class="scroll-progress" aria-hidden="true"></div>
-  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Anandhu Pradeep home">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2">
-            <path d="M10 34 24 10l14 24" />
-            <path d="M17 27h14" />
-            <circle cx="24" cy="27" r="3.5" fill="currentColor" stroke="none" />
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Go to top">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M4 17 12 3l8 14" />
+            <path d="M7.5 13h9" />
+            <path d="M10 21h4" />
           </svg>
         </span>
         <span>Anandhu Pradeep</span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav">
+        <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#expertise">Expertise</a>
         <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#companies">Companies</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"></button>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">◐</button>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero" id="top">
+  <main id="top">
+    <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Embedded systems · hardware validation · IoT integration</span>
-          <h1>Anandhu builds reliable embedded products from circuit to deployed system.</h1>
-          <p>Anandhu Pradeep is an embedded hardware engineer focused on electronics, power systems, firmware, validation, and intelligent embedded solutions. His work spans industrial test infrastructure, robotics vision systems, underwater sensing, automotive electronics, and connected vehicle platforms.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#projects">View selected work</a>
-            <a class="btn btn-secondary" href="#contact">Discuss opportunities</a>
+          <div class="eyebrow">Embedded hardware · power electronics · intelligent systems</div>
+          <h1>Anandhu <span>Pradeep</span></h1>
+          <p class="lede">Embedded Hardware Engineer with experience across automotive electronics, EV charging systems, avionics power conversion, intelligent sensing, robotics vision, and industrial validation. I build systems from architecture and PCB design through firmware, testing, data logging, and deployment.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-secondary" href="#contact">Add LinkedIn, GitHub & contact</a>
           </div>
-          <div class="hero-stats reveal">
-            <div class="stat-chip"><strong>Embedded</strong><span>Hardware + firmware</span></div>
-            <div class="stat-chip"><strong>Industrial</strong><span>Validation workflows</span></div>
-            <div class="stat-chip"><strong>IoT</strong><span>Data-connected systems</span></div>
+          <div class="hero-meta">
+            <div class="meta-box"><strong>3+ years</strong><span>Embedded hardware and product development experience</span></div>
+            <div class="meta-box"><strong>Bremen, Germany</strong><span>Master's thesis stage, open to engineering opportunities</span></div>
+            <div class="meta-box"><strong>10+ prototypes</strong><span>Production-linked hardware, validation, and integration work</span></div>
           </div>
         </div>
-        <aside class="hero-panel reveal" aria-label="Profile highlights">
-          <div class="hero-orbit" aria-hidden="true"></div>
-          <div class="system-card">
-            <div class="system-top">
-              <span>System profile</span>
-              <span>Germany · Thesis stage</span>
+        <div class="hero-visual">
+          <div class="schematic">
+            <div>
+              <div class="eyebrow">Interactive engineering illustration</div>
+              <h3 style="margin-top:16px;font-size:1.4rem;">System map</h3>
+              <p style="margin-top:8px;color:var(--color-text-muted);">A visual summary of the kind of work shown across the portfolio: sensing, control, connectivity, validation, and deployment.</p>
             </div>
-            <div class="schematic" aria-hidden="true">
-              <div class="schematic-grid"></div>
-              <span class="node one"></span><span class="node two"></span><span class="node three"></span>
-              <span class="trace a"></span><span class="trace b"></span><span class="trace c"></span>
-            </div>
-            <div class="metrics">
-              <div class="metric"><strong>10+</strong><span>Major projects</span></div>
-              <div class="metric"><strong>3</strong><span>Core domains</span></div>
-              <div class="metric"><strong>End-to-end</strong><span>Build approach</span></div>
+            <div class="schematic-grid">
+              <div class="node"><small>Sensing</small><strong>Strain gauges, cameras, instrumentation</strong><span>Signal acquisition, calibration, conditioning</span></div>
+              <div class="node"><small>Control</small><strong>Firmware, ESP32, Arduino, motor drivers</strong><span>Real-time behavior, synchronization, interfaces</span></div>
+              <div class="node"><small>Connectivity</small><strong>MQTT, LTE, GPS, CAN, LAN/Wi-Fi</strong><span>Cloud-linked and distributed embedded systems</span></div>
+              <div class="node"><small>Validation</small><strong>Lab testing, DVP, reliability analysis</strong><span>Industrial-quality verification and deployment</span></div>
             </div>
           </div>
-        </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Profile</div>
+            <h2>Embedded engineering with product depth</h2>
+          </div>
+          <p>This portfolio is structured for public sharing and recruiting. It combines profile, work history, project outcomes, skills, tools, platforms, and communication protocols into one engineering-focused site.</p>
+        </div>
+        <div class="about-grid">
+          <article class="panel">
+            <p>Anandhu Pradeep is an embedded hardware engineer specializing in electronics, power systems, and intelligent embedded solutions. His work spans system architecture, circuit design, prototyping, firmware development, validation, production deployment, industrial testing, and live data-driven monitoring.</p>
+            <p>Across industry and academic projects, the common pattern is cross-domain integration: hardware, software, instrumentation, mechanical design, and validation working together in practical products and prototypes.</p>
+            <div class="chip-wrap" style="margin-top:20px;">
+              <span class="chip">PCB design</span>
+              <span class="chip">Power electronics</span>
+              <span class="chip">Validation & QA</span>
+              <span class="chip">Firmware</span>
+              <span class="chip">IoT systems</span>
+              <span class="chip">Robotics vision</span>
+              <span class="chip">Automotive electronics</span>
+              <span class="chip">Industrial instrumentation</span>
+            </div>
+          </article>
+          <aside class="panel">
+            <h3>At a glance</h3>
+            <div class="stats">
+              <div class="stat"><strong>10</strong><span>Featured projects and technical case studies</span></div>
+              <div class="stat"><strong>4</strong><span>Core domains: sensing, power, mobility, embedded connectivity</span></div>
+              <div class="stat"><strong>100+</strong><span>Actuator control scale demonstrated in academic system design</span></div>
+              <div class="stat"><strong>10,000+</strong><span>Production deployment contribution in connected vehicle work</span></div>
+            </div>
+          </aside>
+        </div>
       </div>
     </section>
 
     <section id="projects">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-head">
           <div>
-            <div class="section-kicker">Project showcase</div>
+            <div class="eyebrow">Projects</div>
             <h2>Selected engineering work</h2>
           </div>
-          <p>These projects show a consistent pattern: system architecture, instrumentation, embedded control, validation, and practical deployment across industrial and research settings.</p>
-        </div>
-        <div class="project-tabs reveal" role="tablist" aria-label="Filter projects">
-          <button class="tab-btn is-active" type="button" data-filter="all" role="tab" aria-selected="true">All</button>
-          <button class="tab-btn" type="button" data-filter="industrial" role="tab" aria-selected="false">Industrial</button>
-          <button class="tab-btn" type="button" data-filter="research" role="tab" aria-selected="false">Research</button>
-          <button class="tab-btn" type="button" data-filter="embedded" role="tab" aria-selected="false">Embedded</button>
+          <p>These cards combine thesis, academic, and professional projects. Each one is presented as a compact case study so the website can be published directly as a public portfolio.</p>
         </div>
         <div class="projects-grid">
-          <article class="project featured reveal" data-category="industrial embedded">
-            <div>
-              <div class="project-meta"><span>Scania · Master’s thesis</span><span>Reliability testing</span></div>
-              <h3>LM-80 LED Test Station Development</h3>
-              <p>Designed a scalable, industry-compliant LED reliability testing system for long-term lumen maintenance analysis, including automation, live monitoring, and post-data analysis workflows.</p>
-              <div class="tags">
-                <span class="tag">MQTT</span><span class="tag">Python dashboard</span><span class="tag">Data logging</span><span class="tag">Circuit design</span><span class="tag">3D CAD</span>
-              </div>
-              <ul class="impact-list">
-                <li>Architected a modular 19-inch rack system for industrial deployment.</li>
-                <li>Built automated acquisition, calibration, and logging workflows for long-duration testing.</li>
-                <li>Integrated MQTT over LAN/Wi-Fi to a broker and database for live monitoring and alerts.</li>
-                <li>Reduced manual intervention while enabling more accurate lifetime prediction.</li>
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <rect x="26" y="30" width="348" height="160" rx="24" stroke="currentColor" opacity="0.18"/>
+                <rect x="52" y="56" width="136" height="108" rx="18" fill="currentColor" opacity="0.07"/>
+                <rect x="212" y="56" width="136" height="34" rx="14" fill="currentColor" opacity="0.08"/>
+                <rect x="212" y="102" width="136" height="20" rx="10" fill="currentColor" opacity="0.08"/>
+                <rect x="212" y="132" width="96" height="20" rx="10" fill="currentColor" opacity="0.08"/>
+                <path d="M92 146V74M120 146V74M148 146V74" stroke="currentColor" opacity="0.32"/>
+                <circle cx="300" cy="157" r="22" fill="currentColor" opacity="0.12"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="eyebrow">Scania · Master's thesis</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">LM-80 LED test station</h3>
+              <p>Designed a scalable LM-80 compliant LED reliability testing system for long-term characterization, automated data acquisition, traceable calibration, predictive analysis, and live monitoring.</p>
+              <ul class="bullet-list">
+                <li>Modular 19-inch rack architecture for industrial deployment.</li>
+                <li>MQTT over LAN/Wi-Fi to broker and database pipeline with long-term storage mapping.</li>
+                <li>Python dashboard, Linux-based logging, and remote configuration workflows.</li>
               </ul>
-              <div class="project-overlay">
-                <span>Hardware architecture · analytics-ready pipeline</span>
-                <span class="project-arrow">Explore <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7-5-7-5"/></svg></span>
-              </div>
-            </div>
-            <div class="project-visual" aria-hidden="true">
-              <div class="mini-chart">
-                <span style="height:42%"></span><span style="height:48%"></span><span style="height:55%"></span><span style="height:60%"></span><span style="height:66%"></span><span style="height:74%"></span><span style="height:78%"></span><span style="height:86%"></span>
-              </div>
-              <div>
-                <div class="project-meta"><span>Infrastructure</span><span>Monitoring</span><span>Validation</span></div>
-              </div>
             </div>
           </article>
 
-          <article class="project reveal" data-category="research embedded">
-            <div class="project-meta"><span>Robotics</span><span>Vision pipeline</span></div>
-            <h3>Quadruped robot navigation</h3>
-            <p>Built a low-cost autonomous navigation system using monocular vision, OpenCV, YOLO, and ROS2 to remove dependence on expensive LiDAR hardware.</p>
-            <div class="tags"><span class="tag">OpenCV</span><span class="tag">YOLO</span><span class="tag">ROS2</span><span class="tag">Camera calibration</span></div>
-            <div class="project-overlay"><span>Low-cost perception stack</span><span class="project-arrow">Details <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7-5-7-5"/></svg></span></div>
-          </article>
-
-          <article class="project reveal" data-category="research embedded">
-            <div class="project-meta"><span>Sensing</span><span>Embedded firmware</span></div>
-            <h3>Water flow direction detection</h3>
-            <p>Developed an underwater strain-gauge sensing system with Wheatstone bridge conditioning, embedded filtering, custom PCB design, and waterproof mechanical housing.</p>
-            <div class="tags"><span class="tag">Strain gauges</span><span class="tag">COMSOL</span><span class="tag">PCB</span><span class="tag">Signal conditioning</span></div>
-            <div class="project-overlay"><span>Custom sensor + PCB pipeline</span><span class="project-arrow">Details <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7-5-7-5"/></svg></span></div>
-          </article>
-
-          <article class="project reveal" data-category="research embedded">
-            <div class="project-meta"><span>Control systems</span><span>Arduino · ESP32</span></div>
-            <h3>Multi-actuator metronome system</h3>
-            <p>Designed a synchronized actuator control platform capable of driving 100 actuators independently with precise timing and tunable BPM, frequency, and pitch.</p>
-            <div class="tags"><span class="tag">Arduino</span><span class="tag">ESP32</span><span class="tag">Real-time control</span></div>
-            <div class="project-overlay"><span>High-channel synchronization</span><span class="project-arrow">Details <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7-5-7-5"/></svg></span></div>
-          </article>
-
-          <article class="project reveal" data-category="industrial embedded">
-            <div class="project-meta"><span>Automotive</span><span>Capgemini Engineering</span></div>
-            <h3>Motor driver system</h3>
-            <p>Worked on schematic design, PCB layout, component selection, prototype testing, and design verification for reliable motor driver systems in automotive and industrial applications.</p>
-            <div class="tags"><span class="tag">Altium</span><span class="tag">DVP</span><span class="tag">CAN analysis</span></div>
-            <div class="project-overlay"><span>Automotive-grade verification</span><span class="project-arrow">Details <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7-5-7-5"/></svg></span></div>
-          </article>
-
-          <article class="project reveal" data-category="industrial embedded">
-            <div class="project-meta"><span>Power electronics</span><span>Avionics</span></div>
-            <h3>Avionics power supply system</h3>
-            <p>Designed and evaluated high-frequency AC-DC/DC-DC conversion systems for avionics use, including simulation, documentation, supplier collaboration, and validation reporting.</p>
-            <div class="tags"><span class="tag">PSpice</span><span class="tag">TI tools</span><span class="tag">Power conversion</span></div>
-            <div class="project-overlay"><span>Critical power architecture</span><span class="project-arrow">Details <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7-5-7-5"/></svg></span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="expertise">
-      <div class="container stack">
-        <div class="panel reveal">
-          <h3>What Anandhu brings</h3>
-          <p>His profile combines hardware architecture, embedded firmware, validation, test automation, instrumentation, and data-connected systems. That mix is especially valuable for teams building products that move from lab prototypes into robust field-ready systems.</p>
-        </div>
-        <div class="panel reveal">
-          <h3>Technical focus</h3>
-          <p>Core strengths include embedded electronics, power systems, PCB development, robotics perception, automotive validation, telematics, and cross-functional integration between mechanical, electrical, and software domains.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head reveal">
-          <div><div class="section-kicker">Capabilities</div><h2>Tools and protocols</h2></div>
-          <p>The portfolio data highlights broad coverage across electronics design, simulation, firmware, robotics software, validation tooling, and industrial communication protocols.</p>
-        </div>
-        <div class="skill-groups">
-          <div class="skill-group reveal">
-            <h4>Engineering and design</h4>
-            <div class="skill-list">
-              <span class="tag">Altium Designer</span><span class="tag">PSpice / LTSpice</span><span class="tag">TI Power Tools</span><span class="tag">SolidWorks</span><span class="tag">COMSOL</span><span class="tag">ANSYS</span><span class="tag">AutoCAD</span>
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <rect x="40" y="34" width="138" height="100" rx="18" fill="currentColor" opacity="0.08"/>
+                <path d="M86 148c28-38 47-57 84-60 38-3 72 16 132 58" stroke="currentColor" opacity="0.25" stroke-width="2"/>
+                <circle cx="104" cy="84" r="18" stroke="currentColor" opacity="0.25"/>
+                <path d="M234 76l38-26 48 12 18 40-28 32-54-8-22-50Z" fill="currentColor" opacity="0.10"/>
+                <circle cx="274" cy="106" r="6" fill="currentColor" opacity="0.35"/>
+                <circle cx="320" cy="94" r="6" fill="currentColor" opacity="0.35"/>
+              </svg>
             </div>
-          </div>
-          <div class="skill-group reveal">
-            <h4>Embedded and software</h4>
-            <div class="skill-list">
-              <span class="tag">C</span><span class="tag">Python</span><span class="tag">ROS2</span><span class="tag">OpenCV</span><span class="tag">YOLO</span><span class="tag">LabVIEW</span><span class="tag">MATLAB / Simulink</span>
+            <div class="project-body">
+              <div class="eyebrow">Robotics · computer vision</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">Vision-based quadruped navigation</h3>
+              <p>Built a low-cost navigation system for a quadruped robot using monocular vision, remote compute, OpenCV, YOLO, and ROS2 instead of expensive LiDAR hardware.</p>
+              <ul class="bullet-list">
+                <li>HSV-based adaptive colour filtering and camera calibration.</li>
+                <li>Perspective-based distance estimation and object identification.</li>
+                <li>Integrated perception with path planning and obstacle avoidance.</li>
+              </ul>
             </div>
-          </div>
-          <div class="skill-group reveal">
-            <h4>Validation and platforms</h4>
-            <div class="skill-list">
-              <span class="tag">CANoe</span><span class="tag">CAN Analyzer</span><span class="tag">JTAG</span><span class="tag">Logic Analyzer</span><span class="tag">Postman</span><span class="tag">Jira</span><span class="tag">STM32</span><span class="tag">NXP</span><span class="tag">TI</span><span class="tag">Renesas</span>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <path d="M36 132c42-24 88-33 164-30 71 4 122 18 164 40" stroke="currentColor" opacity="0.22" stroke-width="20" stroke-linecap="round"/>
+                <rect x="126" y="78" width="148" height="54" rx="27" fill="currentColor" opacity="0.10"/>
+                <path d="M160 104h80" stroke="currentColor" opacity="0.3" stroke-width="2"/>
+                <circle cx="146" cy="105" r="8" fill="currentColor" opacity="0.3"/>
+                <circle cx="254" cy="105" r="8" fill="currentColor" opacity="0.3"/>
+              </svg>
             </div>
-          </div>
-          <div class="skill-group reveal">
-            <h4>Communication protocols</h4>
-            <div class="skill-list">
-              <span class="tag">CAN</span><span class="tag">LIN</span><span class="tag">RS485</span><span class="tag">UART</span><span class="tag">I2C</span><span class="tag">SPI</span><span class="tag">GSM / LTE / GPS</span><span class="tag">LAN</span><span class="tag">Wi-Fi</span><span class="tag">IoT / Telematics</span>
+            <div class="project-body">
+              <div class="eyebrow">Sensing · signal conditioning</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">Water flow direction sensing</h3>
+              <p>Developed an underwater strain-gauge-based sensing system with COMSOL simulation, Wheatstone bridge configuration, custom PCB design, embedded filtering, and waterproof mechanical housing.</p>
+              <ul class="bullet-list">
+                <li>Low-cost alternative to traditional flow sensors.</li>
+                <li>Custom analog front-end and signal-conditioning path.</li>
+                <li>Validated through controlled environmental experiments.</li>
+              </ul>
             </div>
-          </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <rect x="54" y="46" width="292" height="128" rx="24" stroke="currentColor" opacity="0.18"/>
+                <g opacity="0.28" fill="currentColor">
+                  <rect x="80" y="76" width="14" height="68" rx="7"/>
+                  <rect x="112" y="66" width="14" height="78" rx="7"/>
+                  <rect x="144" y="82" width="14" height="62" rx="7"/>
+                  <rect x="176" y="58" width="14" height="86" rx="7"/>
+                  <rect x="208" y="70" width="14" height="74" rx="7"/>
+                  <rect x="240" y="86" width="14" height="58" rx="7"/>
+                  <rect x="272" y="62" width="14" height="82" rx="7"/>
+                  <rect x="304" y="78" width="14" height="66" rx="7"/>
+                </g>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="eyebrow">Control systems · embedded hardware</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">100-actuator metronome system</h3>
+              <p>Designed a synchronized multi-actuator control system using Arduino and ESP32 architectures, with independent BPM, frequency, and pitch control across a large actuation array.</p>
+              <ul class="bullet-list">
+                <li>Scalable actuator driver architecture and hardware interface.</li>
+                <li>Timing synchronization logic optimized for low latency.</li>
+                <li>Applicable to haptics, robotics, and mechanical synchronization.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <rect x="48" y="52" width="116" height="116" rx="24" fill="currentColor" opacity="0.09"/>
+                <path d="M106 88c14 0 24 10 24 24s-10 24-24 24-24-10-24-24 10-24 24-24Z" stroke="currentColor" opacity="0.32" stroke-width="2"/>
+                <rect x="196" y="64" width="156" height="20" rx="10" fill="currentColor" opacity="0.08"/>
+                <rect x="196" y="96" width="120" height="20" rx="10" fill="currentColor" opacity="0.08"/>
+                <rect x="196" y="128" width="96" height="20" rx="10" fill="currentColor" opacity="0.08"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="eyebrow">Capgemini Engineering</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">Motor driver systems</h3>
+              <p>Developed reliable motor driver hardware for automotive and industrial use with schematic design, PCB layout support, worst-case analysis, prototype bring-up, validation, and firmware integration.</p>
+              <ul class="bullet-list">
+                <li>Component selection under electrical, thermal, and lifecycle constraints.</li>
+                <li>DVP-aligned verification, signal validation, and CAN-analyzer-based control.</li>
+                <li>Improved reliability and automotive compliance readiness.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <path d="M52 132h296" stroke="currentColor" opacity="0.16" stroke-width="2"/>
+                <path d="M90 132V80l56-24 58 24v52l-58 24-56-24Z" fill="currentColor" opacity="0.08"/>
+                <path d="M234 84h102" stroke="currentColor" opacity="0.28" stroke-width="16" stroke-linecap="round"/>
+                <path d="M250 132h70" stroke="currentColor" opacity="0.22" stroke-width="16" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="eyebrow">Avionics · power electronics</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">Aircraft power supply conversion</h3>
+              <p>Designed and validated high-frequency power conversion systems from aircraft input ranges to regulated 48V and 12V outputs using simulation, testing, documentation, and aerospace-oriented workflows.</p>
+              <ul class="bullet-list">
+                <li>AC-DC/DC-DC conversion under 135–195V and 400–800Hz aircraft sources.</li>
+                <li>PSpice and TI power tool simulation with load-condition characterization.</li>
+                <li>Validation aligned with aviation-grade process expectations.</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="experience">
       <div class="container">
-        <div class="section-head reveal">
-          <div><div class="section-kicker">Experience map</div><h2>Professional range</h2></div>
-          <p>The project record shows work across thesis research, automotive electronics, avionics power systems, connected mobility, and EV charging validation.</p>
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Experience</div>
+            <h2>Professional and academic timeline</h2>
+          </div>
+          <p>This section is written to help recruiters scan the transition from production-oriented embedded hardware roles into advanced research and system-level engineering work.</p>
         </div>
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-label">Industrial systems</div>
-            <div>
-              <strong>Reliability infrastructure, motor drivers, and power conversion</strong>
-              <p>Anandhu’s work includes industrial LED test systems, automotive motor driver hardware, and avionics power supply development with strong emphasis on compliance, verification, and long-term reliability.</p>
+        <div class="experience-grid">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span>2025–2026 · Master's thesis</span>
+              <strong>Scania — LM-80 test station development</strong>
+              <p>Developed a scalable LED reliability test system with instrumentation, automation, statistical degradation analysis, MQTT-linked monitoring, and industrial workflow alignment.</p>
+            </div>
+            <div class="timeline-item">
+              <span>Feb 2024 – Aug 2024</span>
+              <strong>Capgemini Engineering — Embedded Hardware Engineer</strong>
+              <p>Worked on motor driver systems and avionics power electronics involving schematics, simulations, validation, documentation, and prototype delivery.</p>
+            </div>
+            <div class="timeline-item">
+              <span>Sep 2021 – Feb 2024</span>
+              <strong>BOLT.EARTH — Embedded Hardware Engineer</strong>
+              <p>Developed connected infotainment hardware, segmented LED cluster systems, and EV charger validation processes, contributing to deployed production systems.</p>
             </div>
           </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-label">Connected products</div>
-            <div>
-              <strong>Telematics, infotainment, and EV validation</strong>
-              <p>He has contributed to connected vehicle interfaces, LTE/GPS module integration, cloud validation, and EV charger system testing, combining hardware debugging with product-level QA workflows.</p>
+          <aside class="panel">
+            <h3>Education</h3>
+            <ul class="bullet-list">
+              <li>M.Sc. Mechatronics, Hamburg University of Technology, Germany.</li>
+              <li>M.Sc. All-Electric Propulsion Systems, Uppsala University, Sweden.</li>
+              <li>B.Tech. Electronics and Communication, NSS College of Engineering, India.</li>
+            </ul>
+            <h3 style="margin-top:22px;">Core competencies</h3>
+            <div class="chip-wrap" style="margin-top:14px;">
+              <span class="chip">Hardware design</span>
+              <span class="chip">PCB review</span>
+              <span class="chip">Validation</span>
+              <span class="chip">Power management</span>
+              <span class="chip">System integration</span>
+              <span class="chip">Reliability analysis</span>
+              <span class="chip">Signal conditioning</span>
+              <span class="chip">Requirements engineering</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Skills</div>
+            <h2>Tools, platforms, and protocols</h2>
+          </div>
+          <p>The portfolio documents a broad but coherent toolchain around electronic design, embedded development, simulation, validation, and connected systems.</p>
+        </div>
+        <div class="skill-columns">
+          <div class="skill-card">
+            <h3>Engineering & simulation</h3>
+            <div class="chip-wrap">
+              <span class="chip">Altium Designer</span>
+              <span class="chip">LTspice</span>
+              <span class="chip">PSpice</span>
+              <span class="chip">MATLAB/Simulink</span>
+              <span class="chip">COMSOL</span>
+              <span class="chip">ANSYS</span>
+              <span class="chip">Motor-CAD</span>
+              <span class="chip">AutoCAD</span>
+              <span class="chip">SolidWorks</span>
             </div>
           </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-label">Research engineering</div>
-            <div>
-              <strong>Robotics perception and novel sensing systems</strong>
-              <p>Academic work extends into robot navigation, strain-based underwater sensing, and custom experimental platforms where embedded design and real-world validation are tightly coupled.</p>
+          <div class="skill-card">
+            <h3>Embedded & software</h3>
+            <div class="chip-wrap">
+              <span class="chip">Embedded C</span>
+              <span class="chip">Python</span>
+              <span class="chip">ROS2</span>
+              <span class="chip">OpenCV</span>
+              <span class="chip">YOLO</span>
+              <span class="chip">LabVIEW</span>
+              <span class="chip">Linux</span>
+              <span class="chip">SQL</span>
+              <span class="chip">MQTT</span>
             </div>
           </div>
+          <div class="skill-card">
+            <h3>Validation & communication</h3>
+            <div class="chip-wrap">
+              <span class="chip">CAN</span>
+              <span class="chip">LIN</span>
+              <span class="chip">UART</span>
+              <span class="chip">I2C</span>
+              <span class="chip">SPI</span>
+              <span class="chip">RS485</span>
+              <span class="chip">CANoe</span>
+              <span class="chip">Logic Analyzer</span>
+              <span class="chip">JTAG</span>
+              <span class="chip">LTE/GPS</span>
+              <span class="chip">LAN/Wi-Fi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="companies">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Companies</div>
+            <h2>Interactive company highlights</h2>
+          </div>
+          <p>This section is designed as a visual public-facing summary of work environments and technical responsibilities. You can later replace the cards with official logos or project photos.</p>
+        </div>
+        <div class="companies">
+          <article class="company-card">
+            <strong>Scania</strong>
+            <span>Master's thesis · LED reliability systems</span>
+            <p>Industrial testing infrastructure, instrumentation, analytics, dashboards, and long-duration validation workflows.</p>
+          </article>
+          <article class="company-card">
+            <strong>Capgemini Engineering</strong>
+            <span>Embedded hardware · mobility & power</span>
+            <p>Motor drivers, avionics power conversion, schematic capture, simulation, and validation.</p>
+          </article>
+          <article class="company-card">
+            <strong>BOLT.EARTH</strong>
+            <span>Connected vehicle systems</span>
+            <p>Infotainment hardware, LED clusters, EV charger validation, supplier evaluation, and deployment-oriented testing.</p>
+          </article>
+          <article class="company-card">
+            <strong>Academic innovation</strong>
+            <span>Research projects · sensing & robotics</span>
+            <p>Robotics vision, underwater strain-gauge sensing, actuator control systems, and integrated mechatronic prototyping.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="contact">
-      <div class="container">
-        <div class="contact-card reveal">
-          <!-- <div class="floating-chip">Available for roles</div> -->
-          <div>
-            <h2 style="font-family:var(--font-display);font-size:var(--text-2xl);line-height:1.05;margin:0 0 .8rem;">Open to embedded and product engineering opportunities.</h2>
-            <p style="margin:0;color:var(--color-text-muted);max-width:56ch;">This portfolio version is built from the supplied PDF project data. Contact links, GitHub repositories, CV download, and live case-study pages can be added next.</p>
+      <div class="container contact-grid">
+        <div>
+          <div class="section-head" style="margin-bottom:18px;">
+            <div>
+              <div class="eyebrow">Contact</div>
+              <h2>Make it public-ready</h2>
+            </div>
           </div>
-          <div class="contact-actions">
-            <a class="btn btn-primary" href="mailto:annadhupradeep430@gmail.com">Email</a>
-            <a class="btn btn-secondary" href="https://github.com/anandhupradeepgit" target="_blank" rel="noopener noreferrer">GitHub profile</a>
+          <div class="panel">
+            <p>This website draft is ready to publish after you insert your public links and preferred contact details. The placeholders below are based on the information extracted from your CV and should be reviewed before going live.</p>
+            <div class="contact-list">
+              <div class="contact-item"><strong>Email</strong><span>anandhupradeep430gmail.com</span></div>
+              <div class="contact-item"><strong>Phone</strong><span>+46 769573575</span></div>
+              <div class="contact-item"><strong>LinkedIn</strong><span>linkedin.com/in/anandhu-pradeep</span></div>
+              <div class="contact-item"><strong>Location</strong><span>Bremen, Germany</span></div>
+            </div>
           </div>
         </div>
+        <aside class="contact-card">
+          <div>
+            <div class="eyebrow">Next steps</div>
+            <h3 style="font-size:1.6rem; margin-top:14px;">Recommended additions</h3>
+            <ul class="bullet-list">
+              <li>Add your real GitHub profile and per-project repository links.</li>
+              <li>Replace plain contact strings with clickable public links.</li>
+              <li>Add project screenshots, PCB renders, CAD visuals, or lab photos.</li>
+              <li>Include resume download and a professional profile image if desired.</li>
+            </ul>
+          </div>
+          <div class="link-grid" style="margin-top:26px;">
+            <a class="btn btn-primary" href="mailto:anandhupradeep430gmail.com">Email</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/anandhu-pradeep" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">Portfolio of Anandhu Pradeep · Built from project portfolio content.</div>
+  <footer>
+    <div class="container footer-inner">
+      <span>Portfolio website draft for Anandhu Pradeep.</span>
+      <span>Built as a single-file public portfolio template.</span>
+    </div>
   </footer>
 
   <script>
-    (function(){
+    (function () {
       const root = document.documentElement;
-      const toggle = document.querySelector('[data-theme-toggle]');
+      const btn = document.querySelector('[data-theme-toggle]');
       let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      const render = () => {
+      root.setAttribute('data-theme', theme);
+      btn.textContent = theme === 'dark' ? '☀' : '◐';
+      btn.addEventListener('click', function () {
+        theme = theme === 'dark' ? 'light' : 'dark';
         root.setAttribute('data-theme', theme);
-        if(toggle){
-          toggle.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
-          toggle.innerHTML = theme === 'dark'
-            ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
-            : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"/></svg>';
-        }
-      };
-      render();
-      toggle && toggle.addEventListener('click', () => { theme = theme === 'dark' ? 'light' : 'dark'; render(); });
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.16 });
-      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-      const progress = document.querySelector('.scroll-progress');
-      const syncProgress = () => {
-        const max = document.documentElement.scrollHeight - window.innerHeight;
-        const ratio = max > 0 ? (window.scrollY / max) * 100 : 0;
-        if(progress) progress.style.width = ratio + '%';
-      };
-      syncProgress();
-      window.addEventListener('scroll', syncProgress, { passive: true });
-      window.addEventListener('resize', syncProgress);
-
-      const tabs = document.querySelectorAll('[data-filter]');
-      const cards = document.querySelectorAll('.project[data-category]');
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          const filter = tab.dataset.filter;
-          tabs.forEach(btn => {
-            btn.classList.toggle('is-active', btn === tab);
-            btn.setAttribute('aria-selected', btn === tab ? 'true' : 'false');
-          });
-          cards.forEach(card => {
-            const match = filter === 'all' || card.dataset.category.includes(filter);
-            card.style.display = match ? '' : 'none';
-          });
-        });
+        btn.textContent = theme === 'dark' ? '☀' : '◐';
       });
     })();
   </script>
