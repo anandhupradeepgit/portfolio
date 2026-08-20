@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anandhu Pradeep — Embedded Hardware & Intelligent Systems Engineer</title>
+  <meta name="description" content="Public portfolio website for Anandhu Pradeep, embedded hardware engineer focused on electronics, power systems, firmware, validation, IoT, robotics, and industrial product development." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --color-bg: #f7f6f2;
+      --color-surface: #f9f8f5;
+      --color-surface-2: #fbfbf9;
+      --color-surface-offset: #edeae5;
+      --color-border: rgba(40, 37, 29, 0.12);
+      --color-text: #28251d;
+      --color-text-muted: #66635c;
+      --color-text-faint: #8b877f;
+      --color-text-inverse: #f9f8f4;
+      --color-primary: #0d6b72;
+      --color-primary-hover: #095157;
+      --color-primary-soft: rgba(13, 107, 114, 0.10);
+      --color-chip: rgba(13, 107, 114, 0.12);
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 10px 30px rgba(26, 20, 10, 0.08);
+      --radius-sm: 12px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --content: 1180px;
+    }
+    [data-theme="dark"] {
+      --color-bg: #121311;
+      --color-surface: #181917;
+      --color-surface-2: #1f201d;
+      --color-surface-offset: #292b27;
+      --color-border: rgba(244, 241, 234, 0.10);
+      --color-text: #ece7df;
+      --color-text-muted: #b6b0a5;
+      --color-text-faint: #8a857d;
+      --color-text-inverse: #10110f;
+      --color-primary: #64a8b1;
+      --color-primary-hover: #80bcc4;
+      --color-primary-soft: rgba(100, 168, 177, 0.14);
+      --color-chip: rgba(100, 168, 177, 0.16);
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.25);
+      --shadow-md: 0 12px 40px rgba(0,0,0,0.26);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background:
+        radial-gradient(circle at top right, var(--color-primary-soft), transparent 25%),
+        var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    img, svg { max-width: 100%; display: block; }
+    .container { width: min(var(--content), calc(100% - 32px)); margin: 0 auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: color-mix(in srgb, var(--color-bg) 78%, transparent);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; min-height: 72px;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; font-weight: 700; }
+    .brand-mark {
+      width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center;
+      background: linear-gradient(135deg, var(--color-primary-soft), transparent), var(--color-surface);
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .brand-mark svg { width: 24px; height: 24px; color: var(--color-primary); }
+    .nav { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+    .nav a { color: var(--color-text-muted); font-size: 0.95rem; }
+    .nav a:hover { color: var(--color-text); }
+    .theme-toggle {
+      border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);
+      width: 44px; height: 44px; border-radius: 14px; cursor: pointer;
+    }
+    section { padding: 88px 0; }
+    .hero { padding-top: 64px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.25fr 0.95fr; gap: 30px; align-items: stretch;
+    }
+    .hero-copy, .hero-visual, .panel {
+      background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+    .hero-copy { padding: 42px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px;
+      background: var(--color-chip); color: var(--color-primary); font-size: 0.82rem; font-weight: 700;
+      letter-spacing: 0.03em; text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.06; margin: 0; }
+    h1 {
+      font-family: var(--font-display); font-size: clamp(3rem, 6vw, 6.5rem);
+      font-weight: 400; letter-spacing: -0.04em; margin-top: 22px;
+    }
+    .hero-copy h1 span { color: var(--color-primary); display: block; }
+    .lede {
+      margin-top: 22px; font-size: 1.08rem; color: var(--color-text-muted); max-width: 58ch;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px 20px; border-radius: 16px; font-weight: 700; border: 1px solid transparent;
+    }
+    .btn-primary { background: var(--color-primary); color: var(--color-text-inverse); }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .btn-secondary { border-color: var(--color-border); background: var(--color-surface-2); }
+    .hero-meta {
+      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 34px;
+    }
+    .hero-meta .meta-box {
+      padding: 16px; border-radius: 18px; background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+    }
+    .meta-box strong { display: block; font-size: 1rem; }
+    .meta-box span { color: var(--color-text-muted); font-size: 0.92rem; }
+    .hero-visual { padding: 24px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+    .schematic {
+      min-height: 100%; border-radius: 22px; padding: 26px;
+      background:
+        linear-gradient(180deg, color-mix(in srgb, var(--color-primary-soft) 60%, transparent), transparent 34%),
+        linear-gradient(135deg, var(--color-surface-offset), transparent 55%),
+        var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      display: flex; flex-direction: column; justify-content: space-between; gap: 28px;
+    }
+    .schematic-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px;
+    }
+    .node {
+      border-radius: 18px; border: 1px solid var(--color-border); background: rgba(255,255,255,0.04);
+      padding: 14px; min-height: 92px;
+    }
+    .node small { display: block; color: var(--color-primary); text-transform: uppercase; letter-spacing: .06em; font-weight: 700; }
+    .node strong { display: block; margin-top: 8px; font-size: 1rem; }
+    .node span { color: var(--color-text-muted); font-size: 0.9rem; }
+    .section-head { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 28px; }
+    .section-head p { max-width: 64ch; color: var(--color-text-muted); margin: 10px 0 0; }
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      font-weight: 400; letter-spacing: -0.03em;
+    }
+    .about-grid, .experience-grid, .contact-grid {
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px;
+    }
+    .panel { padding: 28px; }
+    .panel p { color: var(--color-text-muted); }
+    .chip-wrap, .mini-grid, .link-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      padding: 10px 14px; border-radius: 999px; background: var(--color-chip);
+      border: 1px solid var(--color-border); font-size: 0.92rem; color: var(--color-text);
+    }
+    .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; margin-top: 16px; }
+    .stat {
+      padding: 18px; background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: 18px;
+    }
+    .stat strong { display: block; font-size: 1.8rem; font-weight: 800; color: var(--color-primary); }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px;
+    }
+    .project-card {
+      background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 26px;
+      overflow: hidden; box-shadow: var(--shadow-md); display: flex; flex-direction: column;
+    }
+    .project-visual {
+      padding: 22px; min-height: 220px; background:
+        radial-gradient(circle at top left, var(--color-primary-soft), transparent 30%),
+        linear-gradient(135deg, var(--color-surface-offset), transparent 60%),
+        var(--color-surface-2);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .project-body { padding: 22px; }
+    .project-body p { color: var(--color-text-muted); margin: 12px 0 0; }
+    .bullet-list { margin: 16px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .bullet-list li {
+      display: flex; gap: 10px; color: var(--color-text-muted); font-size: 0.96rem;
+    }
+    .bullet-list li::before {
+      content: ""; width: 8px; height: 8px; margin-top: 9px; border-radius: 999px; flex: 0 0 auto;
+      background: var(--color-primary);
+    }
+    .companies {
+      display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 16px;
+    }
+    .company-card {
+      position: relative; overflow: hidden; min-height: 220px; padding: 22px;
+      border-radius: 24px; border: 1px solid var(--color-border); box-shadow: var(--shadow-md);
+      background: linear-gradient(160deg, color-mix(in srgb, var(--color-primary-soft) 70%, transparent), transparent 48%), var(--color-surface);
+    }
+    .company-card::after {
+      content: ""; position: absolute; inset: auto -30px -30px auto; width: 120px; height: 120px;
+      border-radius: 30px; background: var(--color-primary-soft); transform: rotate(12deg);
+    }
+    .company-card strong { font-size: 1.15rem; display: block; }
+    .company-card span { display: block; color: var(--color-text-muted); margin-top: 8px; }
+    .company-card p { color: var(--color-text-muted); font-size: 0.95rem; margin-top: 36px; max-width: 22ch; }
+    .skill-columns {
+      display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px;
+    }
+    .skill-card {
+      padding: 22px; border-radius: 24px; background: var(--color-surface); border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .skill-card h3 { font-size: 1.08rem; margin-bottom: 14px; }
+    .timeline { display: grid; gap: 18px; }
+    .timeline-item {
+      padding: 20px; border-radius: 22px; background: var(--color-surface-2); border: 1px solid var(--color-border);
+    }
+    .timeline-item strong { display: block; font-size: 1.05rem; }
+    .timeline-item span { color: var(--color-primary); font-size: .92rem; font-weight: 700; }
+    .contact-card {
+      min-height: 100%; display: flex; flex-direction: column; justify-content: space-between;
+      background: linear-gradient(135deg, var(--color-primary-soft), transparent 60%), var(--color-surface);
+      border: 1px solid var(--color-border); border-radius: 28px; padding: 28px; box-shadow: var(--shadow-md);
+    }
+    .contact-list { display: grid; gap: 12px; margin-top: 22px; }
+    .contact-item {
+      display: flex; justify-content: space-between; gap: 14px; align-items: center;
+      padding: 14px 16px; background: var(--color-surface-2); border: 1px solid var(--color-border); border-radius: 18px;
+    }
+    .contact-item span { color: var(--color-text-muted); }
+    footer {
+      padding: 24px 0 50px; color: var(--color-text-faint); font-size: 0.92rem;
+    }
+    .footer-inner { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; border-top: 1px solid var(--color-border); padding-top: 20px; }
+    @media (max-width: 1024px) {
+      .hero-grid, .about-grid, .experience-grid, .contact-grid, .projects-grid, .skill-columns, .companies {
+        grid-template-columns: 1fr;
+      }
+      .hero-meta { grid-template-columns: 1fr; }
+      .section-head { align-items: start; flex-direction: column; }
+    }
+    @media (max-width: 760px) {
+      .nav { display: none; }
+      .hero-copy, .panel, .hero-visual, .contact-card { padding: 22px; }
+      section { padding: 72px 0; }
+      .hero { padding-top: 28px; }
+      h1 { font-size: clamp(2.6rem, 16vw, 4.4rem); }
+      h2 { font-size: clamp(2rem, 10vw, 3rem); }
+      .companies { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Go to top">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M4 17 12 3l8 14" />
+            <path d="M7.5 13h9" />
+            <path d="M10 21h4" />
+          </svg>
+        </span>
+        <span>Anandhu Pradeep</span>
+      </a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#companies">Companies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Embedded Firmware · Hardware Engineer · Mechtronics · Robotics </div>
+          <h1>Anandhu <span>Pradeep</span></h1>
+          <p class="lede">Embedded Hardware Engineer with experience across automotive electronics, EV charging systems, avionics power conversion, intelligent sensing, robotics vision, and industrial validation. I build systems from architecture and PCB design through firmware, testing, data logging, and deployment.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-secondary" href="#contact">LinkedIn, GitHub & contact</a>
+          </div>
+          <div class="hero-meta">
+            <div class="meta-box"><strong>3+ years</strong><span>Embedded hardware and product development experience</span></div>
+            <div class="meta-box"><strong>Bremen, Germany</strong><span>Master's thesis stage, open to engineering opportunities</span></div>
+            <div class="meta-box"><strong>10+ prototypes</strong><span>Production-linked hardware, validation, and integration work</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="schematic">
+            <div>
+              <div class="eyebrow">Interactive engineering illustration</div>
+              <h3 style="margin-top:16px;font-size:1.4rem;">System map</h3>
+              <p style="margin-top:8px;color:var(--color-text-muted);">A visual summary of the kind of work shown across the portfolio: sensing, control, connectivity, validation, and deployment.</p>
+            </div>
+            <div class="schematic-grid">
+              <div class="node"><small>Sensing</small><strong>Strain gauges, cameras, instrumentation</strong><span>Signal acquisition, calibration, conditioning</span></div>
+              <div class="node"><small>Control</small><strong>Firmware, ESP32, Arduino, motor drivers</strong><span>Real-time behavior, synchronization, interfaces</span></div>
+              <div class="node"><small>Connectivity</small><strong>MQTT, LTE, GPS, CAN, LAN/Wi-Fi</strong><span>Cloud-linked and distributed embedded systems</span></div>
+              <div class="node"><small>Validation</small><strong>Lab testing, DVP, reliability analysis</strong><span>Industrial-quality verification and deployment</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Profile</div>
+            <h2>Embedded engineering with product depth</h2>
+          </div>
+          <!-- <p>This portfolio is structured for public sharing and recruiting. It combines profile, work history, project outcomes, skills, tools, platforms, and communication protocols into one engineering-focused site.</p> -->
+        </div>
+        <div class="about-grid">
+          <article class="panel">
+            <p>Anandhu Pradeep is an embedded hardware engineer specializing in electronics, power systems, and intelligent embedded solutions. His work spans system architecture, circuit design, prototyping, firmware development, validation, production deployment, industrial testing, and live data-driven monitoring.</p>
+            <p>Across industry and academic projects, the common pattern is cross-domain integration: hardware, software, instrumentation, mechanical design, and validation working together in practical products and prototypes.</p>
+            <div class="chip-wrap" style="margin-top:20px;">
+              <span class="chip">Embedded Firmware</span>
+              <span class="chip">Hardware Design</span>
+              <span class="chip">PCB design</span>
+              <span class="chip">Power electronics</span>
+              <span class="chip">Validation & QA</span>
+              <span class="chip">Firmware</span>
+              <span class="chip">IoT systems</span>
+              <span class="chip">Robotics vision</span>
+              <span class="chip">Automotive electronics</span>
+              <span class="chip">Industrial instrumentation</span>
+            </div>
+          </article>
+          <aside class="panel">
+            <h3>At a glance</h3>
+            <div class="stats">
+              <div class="stat"><strong>10</strong><span>Featured projects and technical case studies</span></div>
+              <div class="stat"><strong>4</strong><span>Core domains: sensing, power, mobility, embedded connectivity</span></div>
+              <div class="stat"><strong>100+</strong><span>Actuator control scale demonstrated in academic system design</span></div>
+              <div class="stat"><strong>10,000+</strong><span>Production deployment contribution in connected vehicle work</span></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Projects</div>
+            <h2>Selected engineering work</h2>
+          </div>
+          <!-- <p>These cards combine thesis, academic, and professional projects. Each one is presented as a compact case study so the website can be published directly as a public portfolio.</p> -->
+        </div>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <rect x="26" y="30" width="348" height="160" rx="24" stroke="currentColor" opacity="0.18"/>
+                <rect x="52" y="56" width="136" height="108" rx="18" fill="currentColor" opacity="0.07"/>
+                <rect x="212" y="56" width="136" height="34" rx="14" fill="currentColor" opacity="0.08"/>
+                <rect x="212" y="102" width="136" height="20" rx="10" fill="currentColor" opacity="0.08"/>
+                <rect x="212" y="132" width="96" height="20" rx="10" fill="currentColor" opacity="0.08"/>
+                <path d="M92 146V74M120 146V74M148 146V74" stroke="currentColor" opacity="0.32"/>
+                <circle cx="300" cy="157" r="22" fill="currentColor" opacity="0.12"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="eyebrow">Scania · Master's thesis</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">LM-80 LED test station</h3>
+              <p>Designed a scalable LM-80 compliant LED reliability testing system for long-term characterization, automated data acquisition, traceable calibration, predictive analysis, and live monitoring.</p>
+              <ul class="bullet-list">
+                <li>Modular 19-inch rack architecture for industrial deployment.</li>
+                <li>MQTT over LAN/Wi-Fi to broker and database pipeline with long-term storage mapping.</li>
+                <li>Python dashboard, Linux-based logging, and remote configuration workflows.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+                <!-- <img src="Vision-based.jpg" alt="Vision-based_quadruped_navigation" style="width:100%;height:100%;object-fit:cover;border-radius:16px;"> -->
+
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <rect x="40" y="34" width="138" height="100" rx="18" fill="currentColor" opacity="0.08"/>
+                <path d="M86 148c28-38 47-57 84-60 38-3 72 16 132 58" stroke="currentColor" opacity="0.25" stroke-width="2"/>
+                <circle cx="104" cy="84" r="18" stroke="currentColor" opacity="0.25"/>
+                <path d="M234 76l38-26 48 12 18 40-28 32-54-8-22-50Z" fill="currentColor" opacity="0.10"/>
+                <circle cx="274" cy="106" r="6" fill="currentColor" opacity="0.35"/>
+                <circle cx="320" cy="94" r="6" fill="currentColor" opacity="0.35"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="eyebrow">Robotics · computer vision</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">Vision-based quadruped navigation</h3>
+              <p>Built a low-cost navigation system for a quadruped robot using monocular vision, remote compute, OpenCV, YOLO, and ROS2 instead of expensive LiDAR hardware.</p>
+              <ul class="bullet-list">
+                <li>HSV-based adaptive colour filtering and camera calibration.</li>
+                <li>Perspective-based distance estimation and object identification.</li>
+                <li>Integrated perception with path planning and obstacle avoidance.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <path d="M36 132c42-24 88-33 164-30 71 4 122 18 164 40" stroke="currentColor" opacity="0.22" stroke-width="20" stroke-linecap="round"/>
+                <rect x="126" y="78" width="148" height="54" rx="27" fill="currentColor" opacity="0.10"/>
+                <path d="M160 104h80" stroke="currentColor" opacity="0.3" stroke-width="2"/>
+                <circle cx="146" cy="105" r="8" fill="currentColor" opacity="0.3"/>
+                <circle cx="254" cy="105" r="8" fill="currentColor" opacity="0.3"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="eyebrow">Sensing · signal conditioning</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">Water flow direction sensing</h3>
+              <p>Developed an underwater strain-gauge-based sensing system with COMSOL simulation, Wheatstone bridge configuration, custom PCB design, embedded filtering, and waterproof mechanical housing.</p>
+              <ul class="bullet-list">
+                <li>Low-cost alternative to traditional flow sensors.</li>
+                <li>Custom analog front-end and signal-conditioning path.</li>
+                <li>Validated through controlled environmental experiments.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <rect x="54" y="46" width="292" height="128" rx="24" stroke="currentColor" opacity="0.18"/>
+                <g opacity="0.28" fill="currentColor">
+                  <rect x="80" y="76" width="14" height="68" rx="7"/>
+                  <rect x="112" y="66" width="14" height="78" rx="7"/>
+                  <rect x="144" y="82" width="14" height="62" rx="7"/>
+                  <rect x="176" y="58" width="14" height="86" rx="7"/>
+                  <rect x="208" y="70" width="14" height="74" rx="7"/>
+                  <rect x="240" y="86" width="14" height="58" rx="7"/>
+                  <rect x="272" y="62" width="14" height="82" rx="7"/>
+                  <rect x="304" y="78" width="14" height="66" rx="7"/>
+                </g>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="eyebrow">Control systems · embedded hardware</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">100-actuator metronome system</h3>
+              <p>Designed a synchronized multi-actuator control system using Arduino and ESP32 architectures, with independent BPM, frequency, and pitch control across a large actuation array.</p>
+              <ul class="bullet-list">
+                <li>Scalable actuator driver architecture and hardware interface.</li>
+                <li>Timing synchronization logic optimized for low latency.</li>
+                <li>Applicable to haptics, robotics, and mechanical synchronization.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <rect x="48" y="52" width="116" height="116" rx="24" fill="currentColor" opacity="0.09"/>
+                <path d="M106 88c14 0 24 10 24 24s-10 24-24 24-24-10-24-24 10-24 24-24Z" stroke="currentColor" opacity="0.32" stroke-width="2"/>
+                <rect x="196" y="64" width="156" height="20" rx="10" fill="currentColor" opacity="0.08"/>
+                <rect x="196" y="96" width="120" height="20" rx="10" fill="currentColor" opacity="0.08"/>
+                <rect x="196" y="128" width="96" height="20" rx="10" fill="currentColor" opacity="0.08"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="eyebrow">Capgemini Engineering</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">Motor driver systems</h3>
+              <p>Developed reliable motor driver hardware for automotive and industrial use with schematic design, PCB layout support, worst-case analysis, prototype bring-up, validation, and firmware integration.</p>
+              <ul class="bullet-list">
+                <li>Component selection under electrical, thermal, and lifecycle constraints.</li>
+                <li>DVP-aligned verification, signal validation, and CAN-analyzer-based control.</li>
+                <li>Improved reliability and automotive compliance readiness.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual">
+              <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+                <path d="M52 132h296" stroke="currentColor" opacity="0.16" stroke-width="2"/>
+                <path d="M90 132V80l56-24 58 24v52l-58 24-56-24Z" fill="currentColor" opacity="0.08"/>
+                <path d="M234 84h102" stroke="currentColor" opacity="0.28" stroke-width="16" stroke-linecap="round"/>
+                <path d="M250 132h70" stroke="currentColor" opacity="0.22" stroke-width="16" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="project-body">
+              <div class="eyebrow">Avionics · power electronics</div>
+              <h3 style="margin-top:12px; font-size:1.4rem;">Aircraft power supply conversion</h3>
+              <p>Designed and validated high-frequency power conversion systems from aircraft input ranges to regulated 48V and 12V outputs using simulation, testing, documentation, and aerospace-oriented workflows.</p>
+              <ul class="bullet-list">
+                <li>AC-DC/DC-DC conversion under 135–195V and 400–800Hz aircraft sources.</li>
+                <li>PSpice and TI power tool simulation with load-condition characterization.</li>
+                <li>Validation aligned with aviation-grade process expectations.</li>
+              </ul>
+            </div>
+          </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+            <rect x="54" y="48" width="292" height="124" rx="24" stroke="currentColor" opacity="0.18"/>
+            <rect x="78" y="72" width="82" height="76" rx="18" fill="currentColor" opacity="0.09"/>
+            <rect x="180" y="72" width="136" height="18" rx="9" fill="currentColor" opacity="0.09"/>
+            <rect x="180" y="102" width="112" height="18" rx="9" fill="currentColor" opacity="0.09"/>
+            <path d="M118 154c18-18 34-26 54-26" stroke="currentColor" opacity="0.3" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="304" cy="144" r="20" fill="currentColor" opacity="0.10"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="eyebrow">BOLT.EARTH · Connected vehicles</div>
+          <h3 style="margin-top:12px; font-size:1.4rem;">Vehicle infotainment system</h3>
+          <p>
+            Developed a connected infotainment cluster integrating telematics, firmware, communication modules,
+            and mobile-app-linked functionality for smart vehicle interfaces.
+          </p>
+          <ul class="bullet-list">
+            <li>Designed hardware architecture and prototype firmware for a connected embedded vehicle system.</li>
+            <li>Integrated LTE, GPS, and communication modules with logging and debugging support.</li>
+            <li>Tested Android and iOS synchronization behavior and improved reliability through vendor and QA workflows.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+            <rect x="66" y="56" width="268" height="108" rx="24" fill="currentColor" opacity="0.07"/>
+            <g stroke="currentColor" opacity="0.24">
+              <path d="M104 92h26"/>
+              <path d="M144 92h26"/>
+              <path d="M184 92h26"/>
+              <path d="M224 92h26"/>
+              <path d="M264 92h26"/>
+              <path d="M104 126h26"/>
+              <path d="M144 126h26"/>
+              <path d="M184 126h26"/>
+              <path d="M224 126h26"/>
+              <path d="M264 126h26"/>
+            </g>
+            <rect x="90" y="78" width="214" height="64" rx="18" stroke="currentColor" opacity="0.18"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="eyebrow">BOLT.EARTH · Product development</div>
+          <h3 style="margin-top:12px; font-size:1.4rem;">Segmented LED cluster system</h3>
+          <p>
+            Designed a scalable and cost-efficient LED-based display system with PCB optimization, component cost
+            reduction, validation testing, and mechanical integration documentation.
+          </p>
+          <ul class="bullet-list">
+            <li>Led end-to-end development across PCB design, component selection, and structured manufacturing support.</li>
+            <li>Managed supply chain and vendor coordination while validating brightness and performance targets.</li>
+            <li>Created integration and wiring documentation to support scalable deployment and production readiness.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+            <rect x="74" y="44" width="252" height="132" rx="26" stroke="currentColor" opacity="0.18"/>
+            <path d="M116 130h168" stroke="currentColor" opacity="0.24" stroke-width="18" stroke-linecap="round"/>
+            <circle cx="126" cy="96" r="16" fill="currentColor" opacity="0.12"/>
+            <circle cx="274" cy="96" r="16" fill="currentColor" opacity="0.12"/>
+            <path d="M176 86h48v20h-48z" fill="currentColor" opacity="0.08"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="eyebrow">BOLT.EARTH · Validation</div>
+          <h3 style="margin-top:12px; font-size:1.4rem;">EV charger system validation</h3>
+          <p>
+            Validated EV charging hardware and cloud-linked behavior through calibration, load testing,
+            QA planning, and production readiness approval.
+          </p>
+          <ul class="bullet-list">
+            <li>Calibrated power IC behavior for accurate and reliable energy delivery.</li>
+            <li>Ran load tests across real-world operating conditions and verified cloud/app consistency.</li>
+            <li>Developed structured test plans and QA procedures that supported hardware approval for deployment.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-visual">
+          <svg viewBox="0 0 400 220" fill="none" aria-hidden="true">
+            <rect x="72" y="42" width="256" height="136" rx="26" fill="currentColor" opacity="0.07"/>
+            <rect x="98" y="68" width="84" height="84" rx="18" stroke="currentColor" opacity="0.25"/>
+            <path d="M204 78h98" stroke="currentColor" opacity="0.24" stroke-width="14" stroke-linecap="round"/>
+            <path d="M204 112h78" stroke="currentColor" opacity="0.20" stroke-width="14" stroke-linecap="round"/>
+            <path d="M124 94l32 16-32 16V94Z" fill="currentColor" opacity="0.24"/>
+          </svg>
+        </div>
+        <div class="project-body">
+          <div class="eyebrow">Analysis · Reverse engineering</div>
+          <h3 style="margin-top:12px; font-size:1.4rem;">Reverse engineering and product analysis</h3>
+          <p>
+            Analyzed commercially available electronic products to identify components, recreate schematics,
+            understand architecture, and evaluate cost-performance trade-offs.
+          </p>
+          <ul class="bullet-list">
+            <li>Identified components and reconstructed circuit-level understanding of existing products.</li>
+            <li>Recreated schematic logic and evaluated system design decisions from a hardware perspective.</li>
+            <li>Strengthened debugging, system-analysis, and cost-versus-performance decision-making skills.</li>
+          </ul>
+        </div>
+      </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Experience</div>
+            <h2>Professional and academic timeline</h2>
+          </div>
+          <!-- <p>This section is written to help recruiters scan the transition from production-oriented embedded hardware roles into advanced research and system-level engineering work.</p> -->
+        </div>
+        <div class="experience-grid">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span>2025–2026 · Master's thesis</span>
+              <strong>Scania — LM-80 test station development</strong>
+              <p>Developed a scalable LED reliability test system with instrumentation, automation, statistical degradation analysis, MQTT-linked monitoring, and industrial workflow alignment.</p>
+            </div>
+            <div class="timeline-item">
+              <span>Feb 2024 – Aug 2024</span>
+              <strong>Capgemini Engineering — Embedded Hardware Engineer</strong>
+              <p>Worked on motor driver systems and avionics power electronics involving schematics, simulations, validation, documentation, and prototype delivery.</p>
+            </div>
+            <div class="timeline-item">
+              <span>Sep 2021 – Feb 2024</span>
+              <strong>BOLT.EARTH — Embedded Hardware Engineer</strong>
+              <p>Developed connected infotainment hardware, segmented LED cluster systems, and EV charger validation processes, contributing to deployed production systems.</p>
+            </div>
+          </div>
+          <aside class="panel">
+            <h3>Education</h3>
+            <ul class="bullet-list">
+              <li>M.Sc. Mechatronics, Hamburg University of Technology, Germany.</li>
+              <li>M.Sc. All-Electric Propulsion Systems, Uppsala University, Sweden.</li>
+              <li>B.Tech. Electronics and Communication, NSS College of Engineering, India.</li>
+            </ul>
+            <h3 style="margin-top:22px;">Core competencies</h3>
+            <div class="chip-wrap" style="margin-top:14px;">
+              <span class="chip">Hardware design</span>
+              <span class="chip">PCB review</span>
+              <span class="chip">Validation</span>
+              <span class="chip">Power management</span>
+              <span class="chip">System integration</span>
+              <span class="chip">Reliability analysis</span>
+              <span class="chip">Signal conditioning</span>
+              <span class="chip">Requirements engineering</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Skills</div>
+            <h2>Tools, platforms, and protocols</h2>
+          </div>
+          <p> Coherent toolchain around electronic design, embedded development, simulation, validation, and connected systems.</p>
+        </div>
+        <div class="skill-columns">
+          <div class="skill-card">
+            <h3>Engineering & simulation</h3>
+            <div class="chip-wrap">
+              <span class="chip">Altium Designer</span>
+              <span class="chip">LTspice</span>
+              <span class="chip">PSpice</span>
+              <span class="chip">MATLAB/Simulink</span>
+              <span class="chip">COMSOL</span>
+              <span class="chip">ANSYS</span>
+              <span class="chip">Motor-CAD</span>
+              <span class="chip">AutoCAD</span>
+              <span class="chip">SolidWorks</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>Embedded & software</h3>
+            <div class="chip-wrap">
+              <span class="chip">Embedded C</span>
+              <span class="chip">Python</span>
+              <span class="chip">ROS2</span>
+              <span class="chip">OpenCV</span>
+              <span class="chip">YOLO</span>
+              <span class="chip">LabVIEW</span>
+              <span class="chip">Linux</span>
+              <span class="chip">SQL</span>
+              <span class="chip">MQTT</span>
+              <span class="chip">GitHub</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>Validation & communication</h3>
+            <div class="chip-wrap">
+              <span class="chip">CAN</span>
+              <span class="chip">LIN</span>
+              <span class="chip">UART</span>
+              <span class="chip">I2C</span>
+              <span class="chip">SPI</span>
+              <span class="chip">RS485</span>
+              <span class="chip">CANoe</span>
+              <span class="chip">Logic Analyzer</span>
+              <span class="chip">JTAG</span>
+              <span class="chip">LTE/GPS</span>
+              <span class="chip">LAN/Wi-Fi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="companies">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Companies</div>
+            <h2>Interactive company highlights</h2>
+          </div>
+          <p>Summary of work environments and technical responsibilities.</p>
+        </div>
+        <div class="companies">
+          <article class="company-card">
+            <strong>Scania</strong>
+            <span>Master's thesis · LED reliability systems</span>
+            <p>Industrial testing infrastructure, instrumentation, analytics, dashboards, and long-duration validation workflows.</p>
+          </article>
+          <article class="company-card">
+            <strong>Capgemini Engineering</strong>
+            <span>Embedded hardware · mobility & power</span>
+            <p>Motor drivers, avionics power conversion, schematic capture, simulation, and validation.</p>
+          </article>
+          <article class="company-card">
+            <strong>BOLT.EARTH</strong>
+            <span>Connected vehicle systems</span>
+            <p>Infotainment hardware, LED clusters, EV charger validation, supplier evaluation, and deployment-oriented testing.</p>
+          </article>
+          <article class="company-card">
+            <strong>Academic innovation</strong>
+            <span>Research projects · sensing & robotics</span>
+            <p>Robotics vision, underwater strain-gauge sensing, actuator control systems, and integrated mechatronic prototyping.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="section-head" style="margin-bottom:18px;">
+            <div>
+              <div class="eyebrow">Contact</div>
+              <h2>Let’s Talk</h2>
+            </div>
+          </div>
+          <div class="panel">
+            <!-- <p> </p> -->
+            <div class="contact-list">
+              <div class="contact-item"><strong>Email</strong><span>anandhupradeep430@gmail.com</span></div>
+              <div class="contact-item"><strong>Phone</strong><span>+46 769573575</span></div>
+              <div class="contact-item"><strong>LinkedIn</strong><span>linkedin.com/in/anandhu-pradeep</span></div>
+              <div class="contact-item"><strong>Location</strong><span>Bremen, Germany</span></div>
+            </div>
+          </div>
+        </div>
+        <aside class="contact-card">
+          <div>
+            <div class="eyebrow">Next steps</div>
+            <h3 style="font-size:1.6rem; margin-top:14px;">Recommended additions</h3>
+            <ul class="bullet-list">
+              <!-- <li>Add your real GitHub profile and per-project repository links.</li> -->
+              <a class="btn btn-primary" href="https://github.com/anandhupradeepgit">GitHub</a>              
+              <!-- <li>Replace plain contact strings with clickable public links.</li> -->
+              </ul>
+          </div>
+          <div class="link-grid" style="margin-top:26px;">
+            <a class="btn btn-primary" href="mailto:anandhupradeep430gmail.com">Email</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/anandhu-pradeep" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Portfolio website for Anandhu Pradeep.</span>
+      <span>Built as a single-file public portfolio template.</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const btn = document.querySelector('[data-theme-toggle]');
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+      btn.textContent = theme === 'dark' ? '☀' : '◐';
+      btn.addEventListener('click', function () {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        btn.textContent = theme === 'dark' ? '☀' : '◐';
+      });
+    })();
+  </script>
+</body>
+</html>
